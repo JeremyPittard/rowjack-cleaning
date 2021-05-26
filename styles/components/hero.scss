@@ -1,0 +1,36 @@
+.hero {
+
+    @mixin tile-shift($shift) {
+        bottom: $shift;
+        right: $shift;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    &__img {
+        .yellow-tile {
+            @include tile-shift(-15px)
+        }
+        
+        .blue-tile {
+            @include tile-shift(-30px)
+        }
+        .green-tile {
+
+            @include tile-shift(-45px)
+        }
+
+        .img-tile {
+            @include tile-shift(0)
+        }
+    }
+
+    &__content {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    .scroll {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
