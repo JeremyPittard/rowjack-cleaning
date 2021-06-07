@@ -1,0 +1,9 @@
+.contact {
+    a:not(.btn) {
+        display: block;
+        transition: all 200ms ease-out;
+        &:hover, &:focus {
+            transform: translateY(-4px);
+        }
+    }
+}

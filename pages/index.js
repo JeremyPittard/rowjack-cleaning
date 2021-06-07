@@ -8,6 +8,13 @@ import client from '../lib/api'
 import SiteHead from '../components/Meta'
 import About from '../components/About'
 
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals("ScrollTrigger", ScrollTrigger);
+
 export default function Home({results}) {
 
   const heroProps = {...results.siteSettings}
@@ -17,8 +24,7 @@ export default function Home({results}) {
   return (
 
     <>
-      <SiteHead />
-      <Nav { ...siteSettings }/>
+      <SiteHead {...siteSettings}/>
       <Hero { ...heroProps }/>
       <About { ...aboutProps} />
       <Services serviceList={serviceProps} serviceContent={aboutProps }/>

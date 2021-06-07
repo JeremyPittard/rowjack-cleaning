@@ -3,9 +3,10 @@ import { LocalBusiness } from "schema-dts";
 import { JsonLd, jsonLdScriptProps } from "react-schemaorg";
 
 const SiteHead = (props) => {
+  console.log(props, 'site settings')
   return (
     <Head>
-      <title>{props.pageTitle}</title>
+      <title>{props.siteTitleUsedForSeo}</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"

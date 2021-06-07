@@ -1,36 +1,51 @@
 .hero {
+  &__img {
+    min-height: 102vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
 
-    @mixin tile-shift($shift) {
-        bottom: $shift;
-        right: $shift;
-        opacity: 0;
-        transform: translateY(-10px);
+    &:after {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: rgb(0, 97, 160);
+      background: linear-gradient(
+        rgba(0, 97, 160, 1) 0%,
+        rgba(0, 97, 160, 0) 92%
+      );
+
+      @media (min-width: 1024px) {
+        background: linear-gradient(
+            90deg,
+            rgba(0, 97, 160, 0.6) 0%,
+            rgba(0, 97, 160, 0) 92%);
+      
+          
+      }
+    
     }
-    &__img {
-        .yellow-tile {
-            @include tile-shift(-15px)
-        }
-        
-        .blue-tile {
-            @include tile-shift(-30px)
-        }
-        .green-tile {
+  }
 
-            @include tile-shift(-45px)
-        }
+  &__logo {
+    transform: scale(0);
+  }
 
-        .img-tile {
-            @include tile-shift(0)
-        }
-    }
+  .hero-book,
+  .hero-title {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
 
-    &__content {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    .scroll {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  .scroll-img {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
