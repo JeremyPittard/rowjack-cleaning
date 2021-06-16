@@ -25,7 +25,7 @@ const About = (props) => {
             }}
           ></div>
           <div className="about__img shift-down opacity-0">
-            <img src="/img/cleaning-job.jpg" alt="" width="600" height="700" />
+            <img src="/img/vacuum.jpg" alt="" width="600" height="700" />
           </div>
         </div>
       </div>

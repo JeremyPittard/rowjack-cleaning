@@ -1,6 +1,26 @@
 import Head from "next/head";
-import { LocalBusiness } from "schema-dts";
-import { JsonLd, jsonLdScriptProps } from "react-schemaorg";
+
+//todo hook up to cms
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Rowjack Commercial Cleaning",
+      "image": "",
+      "@id": "https://rowjack.com.au",
+      "url": "https://rowjack.com.au",
+      "telephone": "0419 981 037",
+      "priceRange": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Perth",
+        "addressRegion": "WA",
+        "postalCode": "6027",
+        "addressCountry": "AU",
+      },
+      "sameAs": "https://www.facebook.com/RowjackEnviro/",
+      "knowsAbout": ["vacate cleans", "pressure washing"],
+}
 
 const SiteHead = (props) => {
   console.log(props, 'site settings')
@@ -32,30 +52,7 @@ const SiteHead = (props) => {
         href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap"
         rel="stylesheet"
       />
-      <script
-        {...(jsonLdScriptProps <
-          LocalBusiness >
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Rowjack Commercial Cleaning",
-            image: "",
-            "@id": "https://rowjack.com.au",
-            url: "https://rowjack.com.au",
-            telephone: "0419 981 037",
-            priceRange: "",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "",
-              addressLocality: "Perth",
-              addressRegion: "WA",
-              postalCode: "6027",
-              addressCountry: "AU",
-            },
-            sameAs: "https://www.facebook.com/RowjackEnviro/",
-            knowsAbout: ["vacate cleans", "pressure washing"],
-          })}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(localBusinessSchema)}}/>
     </Head>
   );
 };
