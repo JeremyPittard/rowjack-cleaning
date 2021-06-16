@@ -20,6 +20,7 @@ const localBusinessSchema = {
       },
       "sameAs": "https://www.facebook.com/RowjackEnviro/",
       "knowsAbout": ["vacate cleans", "pressure washing"],
+      "image": `https://images.ctfassets.net/xxd9jeapnil7/6AXGSWyYYCGiEshRSyQthW/db0ceb7aea5e7cba672b72252e89d23f/footer-logo.svg`
 }
 
 const SiteHead = (props) => {
