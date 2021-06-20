@@ -3,7 +3,7 @@ const Footer = props => {
     return(
 
         <footer className="bg-rj-blue text-white py-12">
-            <div className="container mx-auto text-sm flex flex-col md:flex-row md:px-8 xl:px-0 items-center">
+            <div className="container mx-auto text-sm flex flex-col md:flex-row md:px-8 2xl:px-0 items-center">
                 <div className="md:w-1/3 mb-12 md:mb-0 text-lg">
                         Rowjack &copy; {year}
                 </div>

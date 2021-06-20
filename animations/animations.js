@@ -15,7 +15,7 @@ export const heroAnimations = () => {
   .to('.hero__logo', {transform: 'scale(1)'})
   .to('.hero-title', {opacity: 1, transform: 'trasnlateX(0)'})
   .to('.hero-book', {opacity: 1, transform: 'trasnlateX(0)', onComplete: shiftImage})
-  .to('.scroll-img', {opacity: 1})
+  .to('.scroll-img', {opacity: 1, delay: 5})
   .to('.scroll-img', {transform: 'translateY(-20px)', yoyo: true, repeat: -1, yoyoEase: Bounce.easeOut, duration: .75});
 
   function shiftImage() {

@@ -11,7 +11,7 @@ const About = (props) => {
   return (
     <section
       id="about"
-      className="px-12 pb-12 xl:px-0 about md:flex items-start"
+      className="px-12 pb-12 2xl:px-0 about md:flex items-start"
     >
       <div className="container mx-auto">
         <h2 className="text-4xl md:text-5xl xl:text-6xl my-12 about__heading opacity-0 shift-down">
